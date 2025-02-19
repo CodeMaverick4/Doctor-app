@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+:root {
+  --headingColor: #0066FF;
+  --font12: 12px;
+  --font16: 16px;
+  --font20: 20px;
+  --font24: 24px;
+  --font26: 26px;
+  --font55: 55px;
+  --gradient: linear-gradient(to top right, #B2E6FD, #9BD8F1, #2D0CFF);
+  --body-gradient: linear-gradient(180deg, #06F 0%, #4E94FF 100%);
+  --card-background: rgba(255, 255, 255, 0.55);
+  --sidebar-shadow: rgb(255, 255, 255, 0.55);
+  --green-background: #DFFDDD;
+  --red-background: #FBC3C3;
+  --text-color: #4E94FF;
+  --sidebar-color: #CCCCFF;
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 ,p{
+  margin: 0 !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  /* font-family: "Quicksand", serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--body-gradient);
+  /* overflow-y: hidden; */
+}
+.custom-radius{
+  border-radius: 20px 20px 0px 0px;
+  height: 99vh;
+}
+@media screen and (max-width:680px) {
+  .custom-radius{
+    border-radius: 0px;
+  }
+}
+.nav-background {
+  background: #ffffff;
+}
+.bg-gradient-custom {
+  background: var(--gradient);
+  border-radius: 30px;
+}
+.sidebar {
+  width: 120px;
+  transition: width 0.3s ease-in-out;
+  position: static;
+}
+@media screen and (max-width:680px) {
+  .sidebar.collapse {
+    width: 0 !important;
+    overflow: hidden;
+  }
+
+}
+.sidebar-icon{
+  border-radius: 10px; 
+  background: #5da4f8 ;
+  padding: 15px; 
+}
+.sidebar-icon.active{
+  background: var(--sidebar-shadow);
+  color: white;
+}
+.sidebar-label {
+  color: #ffffff;
+  font-size: var(--font12);
+  transition: all 0.3s ;
+}
+.active {
+  font-size: var(--font16);
+}
+.sidebar-submenu {
+  position: absolute;
+  /* position: fixed; */
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  right: -160px;
+  background: var(--headingColor);
+  border-radius: 10px;
+  z-index: 9999;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.sidebar-submenu.show {
+  opacity: 1;
+  transform: scaleY(1);
+}
+.sidebar-submenu-items {
+  border: 1px solid var(--card-background);
+}
+.sidebar-submenu-items:hover {
+  background: var(--card-background);
+}
+
+.card {
+  background: var(--card-background) !important;
+  width: 219px;
+  height: 122px;
+  box-shadow: 5px 5px 1px 1px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width:680px) {
+  .card{
+    width: 100%;
+  }
+}
+
+.dashboard-hero-section-heading{
+  font-size: var(--font26);
+}
+.dashboard-hero-section-heading span{
+  color: var(--text-color);
+}
+@media screen and (max-width:680px) {
+  .dashboard-hero-section-heading{
+    font-size: var(--font24);
+
+  }
+  
+}
+.card:hover,
+.card:hover .card-trend {
+  box-shadow: none;
+}
+
+.card-trend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 5px 5px 1px 1px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+
+}
+
+.card-green {
+  /* border: 1px solid #86f27f; */
+  background: var(--green-background);
+}
+
+.card-red {
+  /* border: 1px solid #dc3545; */
+  background: var(--red-background);
+}
+
+.chart-container {
+  /* width: 80%; */
+  background-color: #ffffff;
+  /* padding: 20px; */
+  border-radius: 10px;
+  border: 1px solid rgba(200, 200, 200, 0.6);
+}
+
+
+.calendar-container {
+  max-height: 0;
+  width: 28vw;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.calendar-container.show {
+  max-height: 300px;
+}
+
+@media screen and (max-width:680px) {
+  .mainContent {
+    height: auto;
+  }
+
+  .card,
+  .card-trend {
+    box-shadow: none !important;
+  }
+
+  .sidebar {
+    background: var(--body-gradient);
+    position: fixed;
+  }
+
+  .calendar-container {
+    width: 100%;
+  }
+}
