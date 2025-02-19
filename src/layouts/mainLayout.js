@@ -12,7 +12,7 @@ const MainLayout = () => {
       {/* Sidebar */}
       <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
       {/* Main Content */}
-      <div className="z-1 w-100 px-3 d-flex flex-column bg-white  mt-md-2  me-md-2 custom-radius " >
+      <div className="z-1 w-100 px-md-3 px-2 d-flex flex-column bg-white  mt-md-2  me-md-2 custom-radius " >
         <TopBar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
         <Outlet />
       </div>

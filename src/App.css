@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
 :root {
   --headingColor: #0066FF;
+  --font10: 10px;
   --font12: 12px;
+  --font14: 14px;
   --font16: 16px;
   --font20: 20px;
   --font24: 24px;
@@ -70,21 +72,24 @@ body {
 
 }
 .sidebar-icon{
+  display: inline-block;
+  color: var(--card-background);
   border-radius: 10px; 
   background: #5da4f8 ;
-  padding: 15px; 
+  padding: 10px 15px ; 
 }
 .sidebar-icon.active{
   background: var(--sidebar-shadow);
   color: white;
 }
 .sidebar-label {
-  color: #ffffff;
+  color: var(--card-background);
   font-size: var(--font12);
   transition: all 0.3s ;
 }
-.active {
-  font-size: var(--font16);
+.sidebar-label.active {
+  color: white;
+  font-size: var(--font14);
 }
 .sidebar-submenu {
   position: absolute;
