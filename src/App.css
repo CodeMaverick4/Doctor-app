@@ -17,6 +17,7 @@
   --red-background: #FBC3C3;
   --text-color: #4E94FF;
   --sidebar-color: #CCCCFF;
+  --sidebar-icon-default-background: #1171FF;
 
 }
 * {
@@ -47,11 +48,11 @@ body {
   border-radius: 20px 20px 0px 0px;
   height: 99vh;
 }
-@media screen and (max-width:680px) {
+/* @media screen and (max-width:680px) {
   .custom-radius{
     border-radius: 0px;
   }
-}
+} */
 .nav-background {
   background: #ffffff;
 }
@@ -64,22 +65,22 @@ body {
   transition: width 0.3s ease-in-out;
   position: static;
 }
-@media screen and (max-width:680px) {
+/* @media screen and (max-width:680px) {
   .sidebar.collapse {
     width: 0 !important;
     overflow: hidden;
   }
 
-}
+} */
 .sidebar-icon{
   display: inline-block;
-  color: var(--card-background);
+  color: var(--sidebar-icon-default-background);
   border-radius: 10px; 
   background: #5da4f8 ;
   padding: 10px 15px ; 
 }
 .sidebar-icon.active{
-  background: var(--sidebar-shadow);
+  background: #ffffff;
   color: white;
 }
 .sidebar-label {
@@ -89,7 +90,8 @@ body {
 }
 .sidebar-label.active {
   color: white;
-  font-size: var(--font14);
+  font-weight: 600;
+  /* font-size: var(--font14); */
 }
 .sidebar-submenu {
   position: absolute;
@@ -125,11 +127,9 @@ body {
   box-shadow: 5px 5px 1px 1px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease-in-out;
 }
-@media screen and (max-width:680px) {
-  .card{
-    width: 100%;
-  }
-}
+/* @media screen and (max-width:680px) {
+  
+} */
 
 .dashboard-hero-section-heading{
   font-size: var(--font26);
@@ -137,13 +137,13 @@ body {
 .dashboard-hero-section-heading span{
   color: var(--text-color);
 }
-@media screen and (max-width:680px) {
+/* @media screen and (max-width:680px) {
   .dashboard-hero-section-heading{
     font-size: var(--font24);
 
   }
   
-}
+} */
 .card:hover,
 .card:hover .card-trend {
   box-shadow: none;
@@ -194,6 +194,10 @@ body {
     height: auto;
   }
 
+  .card{
+    width: 100%;
+  }
+
   .card,
   .card-trend {
     box-shadow: none !important;
@@ -204,7 +208,23 @@ body {
     position: fixed;
   }
 
+  .sidebar.collapse {
+    width: 0 !important;
+    overflow: hidden;
+  }
+
   .calendar-container {
     width: 100%;
   }
+
+  .dashboard-hero-section-heading{
+    font-size: var(--font24);
+
+  }
+
+  .custom-radius{
+    border-radius: 0px;
+  }
+
+  
 }
