@@ -32,7 +32,7 @@ const BarChartComponent = () => {
     return () => window.removeEventListener("resize", updateBarSize);
   }, []);
   return (
-    <div className="chart-container p-3  mt-4">
+    <div className="chart-container p-3  mt-5">
       <h2 className="fw-bold " style={{ fontSize: '24px' }}>Total Doctors</h2>
       <h2 className="fw-semibold " style={{ fontSize: '55px' }}>160</h2>
       <ResponsiveContainer width="100%" height={250}>

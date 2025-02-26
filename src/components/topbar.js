@@ -4,7 +4,7 @@ import {LOGO, NAVBAR_MESSAGE} from "../utils/images-constant.js"
 
 const TopBar = ({showSidebar,setShowSidebar }) => {
     return (
-        <div className="rounded-4 d-flex justify-content-between py-3 align-items-center z-2 bg-white ">
+        <div className="rounded-4 d-flex justify-content-between py-3 align-items-center z-2  ">
             <img src={LOGO} alt="Logo" className=' mw-100' />
             <div className='d-flex align-items-center gap-md-4 gap-2'>
                 <div className="position-relative d-none d-md-block">
@@ -34,7 +34,7 @@ const TopBar = ({showSidebar,setShowSidebar }) => {
                         <span className="fw-semibold d-md-block d-none">Advantal Clinic</span>
                         <ChevronDown size={18} className="text-secondary d-md-block d-none" />
                     </button>
-                    <ul className="dropdown-menu">
+                    <ul className="dropdown-menu w-100">
                         <li><a className="dropdown-item" href="#">Logout</a></li>
                     </ul>
                 </div>

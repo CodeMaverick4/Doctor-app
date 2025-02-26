@@ -10,14 +10,15 @@
   --font26: 26px;
   --font55: 55px;
   --gradient: linear-gradient(to top right, #B2E6FD, #9BD8F1, #2D0CFF);
-  --body-gradient: linear-gradient(180deg, #06F 0%, #4E94FF 100%);
+  /* --body-gradient: linear-gradient(180deg, #06F 0%, #4E94FF 100%); */
+  --body-gradient: #0167FF;
   --card-background: rgba(255, 255, 255, 0.55);
   --sidebar-shadow: rgb(255, 255, 255, 0.55);
   --green-background: #DFFDDD;
   --red-background: #FBC3C3;
   --text-color: #4E94FF;
   --sidebar-color: #CCCCFF;
-  --sidebar-icon-default-background: #1171FF;
+  /* --sidebar-icon-default-background: #1171FF; */
 
 }
 * {
@@ -39,10 +40,25 @@ h6 ,p{
 }
 body {
   /* font-family: "Quicksand", serif; */
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--body-gradient);
+  /* background-color: var(--body-gradient); */
+  
+  /* background: #0167FF; */
   /* overflow-y: hidden; */
+}
+
+.dashboard-background{
+  background: #F8F8F8;
+}
+.topBar-background{
+  padding: 1px;
+  background: #D9D9D9;;
+}
+
+.body-background-color{
+  background-color: var(--body-gradient);
 }
 .custom-radius{
   border-radius: 20px 20px 0px 0px;
@@ -60,10 +76,13 @@ body {
   background: var(--gradient);
   border-radius: 30px;
 }
+
+
 .sidebar {
-  width: 120px;
+  width: 150px;
   transition: width 0.3s ease-in-out;
-  position: static;
+  position: relative;
+  z-index: 9999;
 }
 /* @media screen and (max-width:680px) {
   .sidebar.collapse {
@@ -74,14 +93,15 @@ body {
 } */
 .sidebar-icon{
   display: inline-block;
-  color: var(--sidebar-icon-default-background);
+  /* color: var(--sidebar-icon-default-background); */
   border-radius: 10px; 
   background: #5da4f8 ;
   padding: 10px 15px ; 
+  transition: all 0.3s ease-in-out;
 }
 .sidebar-icon.active{
   background: #ffffff;
-  color: white;
+  /* color: white; */
 }
 .sidebar-label {
   color: var(--card-background);
@@ -96,6 +116,7 @@ body {
 .sidebar-submenu {
   position: absolute;
   /* position: fixed; */
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   width: 150px;
@@ -118,6 +139,38 @@ body {
 }
 .sidebar-submenu-items:hover {
   background: var(--card-background);
+}
+
+.sidebar-link-bar{
+  position: absolute;
+  /* top: 70px; */
+  left: 0px; 
+  width: 7px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  height: 40px;
+  background: white;
+  /* transition: all 0.6s ease-in-out; */
+  transition: top 0.4s ease-in-out, height 0.4s ease-in-out;
+}
+
+.sidebar-top-image{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /* width: 226px;
+  height: 234.699px; */
+  /* transform: rotate(30deg); */
+  z-index: 2;
+  /* fill: #391273; */
+}
+
+.sidebar-logout-border{
+  margin: 20px 0px 20px 0px;
+  width: 80%;
+  background: #97C1FF;
+  padding: 1px;
+  
 }
 
 .card {
@@ -186,7 +239,7 @@ body {
 }
 
 .calendar-container.show {
-  max-height: 300px;
+  max-height: 700px;
 }
 
 @media screen and (max-width:680px) {
@@ -206,6 +259,7 @@ body {
   .sidebar {
     background: var(--body-gradient);
     position: fixed;
+    width: 120px;
   }
 
   .sidebar.collapse {
@@ -225,6 +279,42 @@ body {
   .custom-radius{
     border-radius: 0px;
   }
+}
 
-  
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.matchs_img {
+  width: 55px;
+  height: 55px;
+  padding: 5px;
+  border: 1px solid #0099FF;
+  border-radius: 50%;
+  overflow: hidden; /* Ensures the image does not spill outside the rounded div */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.matchs_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the div without distortion */
+  border-radius: 50%; /* Makes the image fully rounded */
+}
+
+
+.matches_button{
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+  background: #FAE1E1;
+  color: #D30404;
+  width: 80px;
+}
+
+.matches_button.open{
+  color: #008000;
+  background: #E0F0E0;
 }

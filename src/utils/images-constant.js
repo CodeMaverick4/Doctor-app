@@ -13,3 +13,7 @@ export const SIDEBAR_CALENDAR = './images/sidebar/calender.svg';
 export const SIDEBAR_DASHBOARD = './images/sidebar/dashboard.svg';
 export const SIDEBAR_LOGOUT = './images/sidebar/logout.svg';
 export const SIDEBAR_USER = './images/sidebar/user.svg';
+
+// Dashboard images 
+export const DASHBOARD_CHEVRON_LEFT_ICON = './images/dashboard/chevron_right_icon.svg';
+export const DASHBOARD_CHEVRON_RIGHT_ICON = './images/dashboard/chevron_left_icon.svg';

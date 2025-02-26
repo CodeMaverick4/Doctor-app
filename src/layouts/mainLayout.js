@@ -8,12 +8,13 @@ const MainLayout = () => {
 
 
   return (
-    <div className="d-flex gap-2 ">
+    <div className="d-flex body-background-color">
       {/* Sidebar */}
       <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
       {/* Main Content */}
-      <div className="z-1 w-100 px-md-3 px-2 d-flex flex-column bg-white  mt-md-2  me-md-2 custom-radius " >
+      <div className=" w-100 px-md-3 px-2 d-flex flex-column   mt-md-2  me-md-2 custom-radius dashboard-background " >
         <TopBar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+        <div className="topBar-background"></div>
         <Outlet />
       </div>
     </div>

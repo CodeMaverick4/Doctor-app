@@ -8,20 +8,20 @@ import AvailabilityManagement from './pages/availabilityManagement';
 import AppointmentManagement from './pages/appointmentManagement';
 
 function App() {
-  
+
   return (
     <Router>
-    <Routes>
-      <Route element={<MainLayout />} >
-        <Route path="" element={<Dashboard />} />
-        <Route path="Patient" element={<PatientManagement />} />
-        <Route path="Doctor" element={<DoctorManagement />} />
-        <Route path="Availabilty" element={<AvailabilityManagement />} />
-        <Route path="Appointment" element={<AppointmentManagement />} />
-      
-      </Route>
-    </Routes>
-  </Router>
+      <Routes>
+        <Route element={<MainLayout />} >
+          <Route path="" element={<Dashboard />} />
+          <Route path="Patient" element={<PatientManagement />} />
+          <Route path="Doctor" element={<DoctorManagement />} />
+          <Route path="Availabilty" element={<AvailabilityManagement />} />
+          <Route path="Appointment" element={<AppointmentManagement />} />
+
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
