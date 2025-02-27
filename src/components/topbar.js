@@ -4,7 +4,7 @@ import {LOGO, NAVBAR_MESSAGE} from "../utils/images-constant.js"
 
 const TopBar = ({showSidebar,setShowSidebar }) => {
     return (
-        <div className="rounded-4 d-flex justify-content-between py-3 align-items-center z-2  ">
+        <div className="rounded-4 d-flex justify-content-between py-4 align-items-center z-2  ">
             <img src={LOGO} alt="Logo" className=' mw-100' />
             <div className='d-flex align-items-center gap-md-4 gap-2'>
                 <div className="position-relative d-none d-md-block">

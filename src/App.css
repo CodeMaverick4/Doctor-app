@@ -18,6 +18,7 @@
   --red-background: #FBC3C3;
   --text-color: #4E94FF;
   --sidebar-color: #CCCCFF;
+  --sidebar-icon-background: #1171FF;
   /* --sidebar-icon-default-background: #1171FF; */
 
 }
@@ -95,7 +96,7 @@ body {
   display: inline-block;
   /* color: var(--sidebar-icon-default-background); */
   border-radius: 10px; 
-  background: #5da4f8 ;
+  background: var(--sidebar-icon-background) ;
   padding: 10px 15px ; 
   transition: all 0.3s ease-in-out;
 }

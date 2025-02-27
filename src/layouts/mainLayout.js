@@ -12,7 +12,7 @@ const MainLayout = () => {
       {/* Sidebar */}
       <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
       {/* Main Content */}
-      <div className=" w-100 px-md-3 px-2 d-flex flex-column   mt-md-2  me-md-2 custom-radius dashboard-background " >
+      <div className=" w-100 px-md-4 px-2 d-flex flex-column   mt-md-2  me-md-2 custom-radius dashboard-background " >
         <TopBar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
         <div className="topBar-background"></div>
         <Outlet />

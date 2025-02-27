@@ -9,7 +9,7 @@ export default function Dashboard() {
 
 
   return (
-    <div className="d-flex flex-column flex-md-row gap-3 overflow-y-auto mt-2 ">
+    <div className="d-flex flex-column flex-md-row gap-3 overflow-y-auto mt-4 pt-1 ">
       {/* total patient and bar chart  */}
       <div className="flex-grow-1 ">
 
@@ -47,8 +47,8 @@ export default function Dashboard() {
             <img
               src={DOCTOR_IMAGE}
               alt="Patients"
-              className="end-0 position-absolute  "
-              style={{ bottom: '0px' }}
+              className="position-absolute  "
+              style={{right:'10px', bottom: '0px' }}
             />
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function Dashboard() {
       {/* calender and upcomming event   */}
       <div className=''>
         <MyMatching /> 
-        <div className='bg-white border rounded-3 mt-4'>
+        <div className='bg-white border rounded-3 mt-3 mt-md-4'>
           <MyCalendar />
           <UpcomingEvents />
         </div>
